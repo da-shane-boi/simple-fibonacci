@@ -1,5 +1,7 @@
 def get_n(n: int):
 
+    if n < 1:
+        return -1
     if n == 1:
         return 0
     if n == 2:
@@ -8,6 +10,9 @@ def get_n(n: int):
 
 
 def get_sequence(n: int):
+
+    if n < 1:
+        return -1
 
     seq = []
     if n >= 1:
@@ -20,4 +25,4 @@ def get_sequence(n: int):
 
 
 def sum_of_sequence(n: int):
-    return sum(get_sequence(n))
+    return -1 if n < 1 else sum(get_sequence(n))

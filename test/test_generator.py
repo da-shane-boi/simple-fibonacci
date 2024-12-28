@@ -24,6 +24,18 @@ class TestGenerator(unittest.TestCase):
         answer = gen.get_n(5)
         self.assertEqual(3, answer)
 
+    def test_get_n_invalid_one(self):
+        answer = gen.get_n(-1)
+        self.assertEqual(-1, answer)
+
+    def test_get_n_invalid_two(self):
+        answer = gen.get_n(-2)
+        self.assertEqual(-1, answer)
+
+    def test_get_n_invalid_three(self):
+        answer = gen.get_n(0)
+        self.assertEqual(-1, answer)
+
     def test_get_sequence_one(self):
         answer = gen.get_sequence(1)
         self.assertEqual([0], answer)
@@ -44,6 +56,18 @@ class TestGenerator(unittest.TestCase):
         answer = gen.get_sequence(10)
         self.assertEqual([0, 1, 1, 2, 3, 5, 8, 13, 21, 34], answer)
 
+    def test_get_sequence_invalid_one(self):
+        answer = gen.get_sequence(-1)
+        self.assertEqual(-1, answer)
+
+    def test_get_sequence_invalid_two(self):
+        answer = gen.get_sequence(-10)
+        self.assertEqual(-1, answer)
+
+    def test_get_sequence_invalid_three(self):
+        answer = gen.get_sequence(0)
+        self.assertEqual(-1, answer)
+
     def test_sum_sequence_one(self):
         answer = gen.sum_of_sequence(1)
         self.assertEqual(0, answer)
@@ -63,6 +87,18 @@ class TestGenerator(unittest.TestCase):
     def test_sum_sequence_ten(self):
         answer = gen.sum_of_sequence(10)
         self.assertEqual(88, answer)
+
+    def test_sum_sequence_invalid_one(self):
+        answer = gen.sum_of_sequence(-1)
+        self.assertEqual(-1, answer)
+
+    def test_sum_sequence_invalid_two(self):
+        answer = gen.sum_of_sequence(-10)
+        self.assertEqual(-1, answer)
+
+    def test_sum_sequence_invalid_three(self):
+        answer = gen.sum_of_sequence(0)
+        self.assertEqual(-1, answer)
 
 
 if __name__ == "__main__":
